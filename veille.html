@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Technologique - Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="veille.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Mon Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="bts_sio.html">BTS SIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projets.html">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="veille.html">Veille Technologique</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tableau_synthese.html">Tableau de Synthèse</a></li>
+                    <li class="nav-item"><a class="nav-link" href="competences.html">Compétences</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Veille Technologique</h1>
+        <div id="rss-feed" class="row">
+            <!-- Sections des flux RSS -->
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        © 2024 Freitas Morgado David. Tous droits réservés.
+    </footer>
+
+    <script>
+        const rssFeeds = [
+            { name: 'Actualités Tech – Le Monde', url: 'https://www.lemonde.fr/technologies/rss_full.xml' },
+            { name: 'High-Tech et Innovation – 01net', url: 'https://www.01net.com/rss/info/flux-rss/flux-toutes-les-actualites/' },
+            { name: 'Tests et Avis High-Tech – Les Numériques', url: 'https://www.lesnumeriques.com/rss.xml' },
+            { name: 'Actualités IT – ZDNet France', url: 'https://www.zdnet.fr/feeds/rss/actualites/' }
+        ];
+
+        function fetchAndDisplayRSS(feed, containerId) {
+            const rss2jsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}`;
+            fetch(rss2jsonUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const feedContainer = document.getElementById(containerId);
+                    const items = data.items.slice(0, 5);
+
+                    items.forEach(item => {
+                        const article = `
+                            <div class="col-md-6 mb-4">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><a href="${item.link}" target="_blank">${item.title}</a></h5>
+                                        <p class="card-text">${item.description.slice(0, 100)}...</p>
+                                    </div>
+                                </div>
+                            </div>`;
+                        feedContainer.innerHTML += article;
+                    });
+                })
+                .catch(error => console.error(`Erreur lors de la récupération du flux ${feed.name} :`, error));
+        }
+
+        rssFeeds.forEach((feed, index) => {
+            const containerId = `feed-${index}`;
+            document.getElementById('rss-feed').innerHTML += `
+                <div class="col-12 mb-5">
+                    <h2>${feed.name}</h2>
+                    <div id="${containerId}" class="row"></div>
+                </div>`;
+            fetchAndDisplayRSS(feed, containerId);
+        });
+    </script>
+</body>
+</html>
