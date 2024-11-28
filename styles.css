@@ -103,6 +103,23 @@ footer a:hover {
     color: #555;
 }
 
+.card {
+    width: 300px; /* Largeur fixe pour chaque card */
+    margin: 10px; /* Espacement entre les cards */
+    display: inline-block; /* Permet d'aligner les cards horizontalement */
+    vertical-align: top; /* Aligne les cards en haut */
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+    margin: auto; /* Centre l'image */
+    border-bottom: 3px solid #000000; /* Ajoute une barre bleue en bas de l'image */
+}
+
+
+
 @media (max-width: 768px) {
     .col-md-6 {
         flex: 100%;
