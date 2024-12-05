@@ -36,16 +36,18 @@
     </div>
 
     <footer class="bg-dark text-white text-center py-3 mt-5">
-        © 2024 Freitas Morgado David. Tous droits réservés.
+        © 2024 - 2025 | Freitas Morgado David. Tous droits réservés.
     </footer>
 
     <script>
         const rssFeeds = [
             { name: 'Actualités Tech – Le Monde', url: 'https://www.lemonde.fr/technologies/rss_full.xml' },
-            { name: 'High-Tech et Innovation – 01net', url: 'https://www.01net.com/rss/info/flux-rss/flux-toutes-les-actualites/' },
-            { name: 'Tests et Avis High-Tech – Les Numériques', url: 'https://www.lesnumeriques.com/rss.xml' },
-            { name: 'Actualités IT – ZDNet France', url: 'https://www.zdnet.fr/feeds/rss/actualites/' }
+            { name: 'Actualités IT – ZDNet France', url: 'https://www.zdnet.fr/feeds/rss/actualites/' },
+            { name: 'Actualités Tech – Numerama', url: 'https://www.numerama.com/feed/' },
+            { name: 'Tests et Avis High-Tech – Les Numériques', url: 'https://www.lesnumeriques.com/rss.xml' }
+
         ];
+
 
         function fetchAndDisplayRSS(feed, containerId) {
             const rss2jsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}`;
