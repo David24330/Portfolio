@@ -51,6 +51,8 @@ footer {
     font-size: 0.9rem;
 }
 
+
+
 /* Media Query pour les petits écrans (max-width: 768px) */
 @media (max-width: 768px) {
     body {
