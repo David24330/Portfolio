@@ -65,15 +65,6 @@ html, body {
   transform: translateY(-3px);
 }
 
-#contact {
-  height: auto; /* laisse la hauteur s'adapter au contenu */
-  min-height: 100vh; /* au moins la hauteur de l'écran */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* pousse le footer en bas */
-  padding: 2rem;
-  box-sizing: border-box;
-}
 
 @keyframes bounce {
 0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
@@ -136,7 +127,14 @@ a.bg-blue-600:hover {
 
 /* Footer */
 footer {
+  position: absolute; /* permet superposition */
+  bottom: 0; /* place en bas de la page */
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9); /* semi-transparent pour voir derrière */
   border-top: 1px solid #e5e7eb;
-  background: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  z-index: 10; /* au-dessus du contenu */
 }
 
