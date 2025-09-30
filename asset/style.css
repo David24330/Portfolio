@@ -55,19 +55,6 @@ h2, h3, h4 {
   color: #111827;
 }
 
-/* Présentation */
-#presentation h2 {
-  font-size: 2.5rem;
-  background: linear-gradient(90deg, #2563eb, #1e40af);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 800;
-}
-
-#presentation p {
-  font-size: 1.1rem;
-  color: #4b5563;
-}
 
 /* Boutons */
 a.button, 
@@ -79,46 +66,6 @@ a.button:hover,
 a.bg-blue-600:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
-}
-
-/* À propos */
-#about img {
-  max-width: 100%;
-  border: 4px solid #e5e7eb;
-  transition: transform 0.3s ease;
-}
-
-#about img:hover {
-  transform: scale(1.05);
-}
-
-/* Compétences */
-#skills .bg-white {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#skills .bg-white:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-/* Diplômes */
-#diplomes ul li {
-  background: #fff;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
-}
-
-#diplomes ul li:hover {
-  transform: translateX(5px);
-}
-
-/* Contact */
-#contact a {
-  font-weight: 600;
-  letter-spacing: 0.5px;
 }
 
 /* Footer */
