@@ -124,6 +124,9 @@ a.bg-blue-600:hover {
   box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Ombre douce */
 }
 
+#presentation a.button {
+  margin: 0 10px;
+}
 
 /* Footer */
 footer {
