@@ -24,14 +24,18 @@ let current = "";
 });
 
 function scrollToNextSection(button) {
-  const currentSection = button.closest("section");
-  const nextSection = currentSection.nextElementSibling;
+  const currentSection = button.closest(".section"); // prend la section actuelle
+  const sections = document.querySelectorAll(".section"); // toutes les sections
+
+  const index = Array.from(sections).indexOf(currentSection); // position actuelle
+  const nextSection = sections[index + 1]; // section suivante
 
   if (nextSection) {
     window.scrollTo({
       top: nextSection.offsetTop,
-      behavior: "smooth"
+      behavior: "smooth" // défilement fluide
     });
   }
 }
+
 
