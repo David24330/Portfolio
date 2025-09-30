@@ -24,18 +24,40 @@ let current = "";
 });
 
 function scrollToNextSection(button) {
-  const currentSection = button.closest(".section"); // prend la section actuelle
-  const sections = document.querySelectorAll(".section"); // toutes les sections
+  const currentSection = button.closest(".section");
+  const sections = document.querySelectorAll(".section");
 
-  const index = Array.from(sections).indexOf(currentSection); // position actuelle
-  const nextSection = sections[index + 1]; // section suivante
+  const index = Array.from(sections).indexOf(currentSection);
+  const nextSection = sections[index + 1];
 
   if (nextSection) {
-    window.scrollTo({
-      top: nextSection.offsetTop,
-      behavior: "smooth" // défilement fluide
-    });
+    smoothScrollTo(nextSection.offsetTop, 1000); // durée en ms
   }
 }
+
+function smoothScrollTo(target, duration) {
+  const start = window.scrollY;
+  const distance = target - start;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = ease(timeElapsed, start, distance, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  function ease(t, b, c, d) {
+    // fonction easing (facile pour un défilement fluide)
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+  }
+
+  requestAnimationFrame(animation);
+}
+
 
 
