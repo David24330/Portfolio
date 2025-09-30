@@ -1,25 +1,27 @@
-/* 🌍 Activer le scroll snap */
+/* Activer le scroll snap */
 html, body {
   height: 100%;
-  scroll-snap-type: y mandatory; /* snap vertical obligatoire */
+  margin: 0;
+  scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
-/* 📄 Chaque section prend 100% de la hauteur écran */
+/* Chaque section occupe tout l'écran */
 section {
-  height: 100vh; /* pleine page */
-  scroll-snap-align: start; /* aligne en haut */
+  height: 100vh;
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 2rem;
 }
 
-
-/* Navigation */
+/* ⚡ Ajustement pour le header sticky */
 header {
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.9);
-  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
 
 nav ul li a {
@@ -40,15 +42,6 @@ nav ul li a::after {
 
 nav ul li a:hover::after {
   width: 100%;
-}
-
-/* Sections */
-section {
-  height: 100vh; /* pleine page */
-  scroll-snap-align: start; /* aligne en haut */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 h2, h3, h4 {
