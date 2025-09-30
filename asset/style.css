@@ -1,11 +1,19 @@
-/* 🎨 Style global */
-body {
-  font-family: 'Segoe UI', Roboto, sans-serif;
-  line-height: 1.6;
-  background: #f9fafb;
-  color: #1f2937;
-  scroll-behavior: smooth;
+/* 🌍 Activer le scroll snap */
+html, body {
+  height: 100%;
+  scroll-snap-type: y mandatory; /* snap vertical obligatoire */
+  overflow-y: scroll;
 }
+
+/* 📄 Chaque section prend 100% de la hauteur écran */
+section {
+  height: 100vh; /* pleine page */
+  scroll-snap-align: start; /* aligne en haut */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 
 /* Navigation */
 header {
@@ -36,7 +44,11 @@ nav ul li a:hover::after {
 
 /* Sections */
 section {
-  padding: 80px 20px;
+  height: 100vh; /* pleine page */
+  scroll-snap-align: start; /* aligne en haut */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h2, h3, h4 {
