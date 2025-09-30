@@ -20,12 +20,26 @@ html, body {
 
 
 .scroll-down {
-margin-top: 2rem;
-font-size: 2rem;
-background: none;
-border: none;
-cursor: pointer;
-animation: bounce 2s infinite;
+  margin-top: 2rem;
+  font-size: 2rem;
+  background-color: #555; /* gris foncé */
+  color: white; /* flèche blanche */
+  border: none;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* rend le bouton rond */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s, transform 0.3s;
+  animation: bounce 2s infinite;
+}
+
+.scroll-down:hover {
+  background-color: #777; /* couleur plus claire au survol */
+  transform: translateY(-3px);
 }
 
 
