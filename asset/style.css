@@ -127,14 +127,7 @@ a.bg-blue-600:hover {
 
 /* Footer */
 footer {
-  position: absolute; /* permet superposition */
-  bottom: 0; /* place en bas de la page */
-  left: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.9); /* semi-transparent pour voir derrière */
   border-top: 1px solid #e5e7eb;
-  text-align: center;
-  padding: 1rem 0;
-  z-index: 10; /* au-dessus du contenu */
+  background: #fff;
 }
 
