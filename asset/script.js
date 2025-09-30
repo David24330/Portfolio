@@ -22,3 +22,12 @@ let current = "";
         }
     });
 });
+
+function scrollToNextSection(button) {
+  const currentSection = button.closest("section");
+  const nextSection = currentSection.nextElementSibling;
+
+  if (nextSection) {
+    nextSection.scrollIntoView({ behavior: "smooth" });
+  }
+}
