@@ -65,6 +65,16 @@ html, body {
   transform: translateY(-3px);
 }
 
+#contact {
+  height: auto; /* laisse la hauteur s'adapter au contenu */
+  min-height: 100vh; /* au moins la hauteur de l'écran */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* pousse le footer en bas */
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
 @keyframes bounce {
 0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
 40% { transform: translateY(10px); }
