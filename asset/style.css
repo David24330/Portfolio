@@ -1,8 +1,10 @@
 
 html, body {
-scroll-behavior: smooth;
 height: 100%;
 margin: 0;
+scroll-snap-type: y mandatory;
+overflow-y: scroll;
+scroll-behavior: smooth;
 }
 
 
@@ -13,12 +15,9 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 scroll-snap-align: start;
-}
-
-
-body {
-scroll-snap-type: y mandatory;
-overflow-y: scroll;
+padding: 2rem;
+box-sizing: border-box;
+position: relative;
 }
 
 
