@@ -28,9 +28,9 @@ function scrollToNextSection(button) {
   const nextSection = currentSection.nextElementSibling;
 
   if (nextSection) {
-    nextSection.scrollIntoView({
-      behavior: "smooth", // défilement fluide
-      block: "start"
+    window.scrollTo({
+      top: nextSection.offsetTop,
+      behavior: "smooth"
     });
   }
 }
