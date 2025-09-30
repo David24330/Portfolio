@@ -60,4 +60,9 @@ function smoothScrollTo(target, duration) {
 }
 
 
-
+function scrollToFirstSection(button) {
+  const firstSection = document.querySelector(".section");
+  if (firstSection) {
+    smoothScrollTo(firstSection.offsetTop, 1000); // durée en ms
+  }
+}
