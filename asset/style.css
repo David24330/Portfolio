@@ -143,3 +143,16 @@ footer {
   margin-left: 8px; /* espace avec le texte */
 }
 
+.preview_compétences {
+  display: inline-block;     /* permet de les aligner sur la même ligne */
+  width: 50px;               /* taille uniforme (ajuste selon tes goûts) */
+  height: auto;              /* garde les proportions */
+  margin: 0 10px;            /* espace horizontal entre les logos */
+  vertical-align: middle;    /* bien alignés au centre verticalement */
+  transition: transform 0.3s ease; /* petit effet hover sympa */
+}
+
+.preview_compétences:hover {
+  transform: scale(1.1);     /* grossit légèrement au survol */
+}
+
