@@ -142,3 +142,17 @@ footer {
   vertical-align: middle; /* aligne avec le texte */
   margin-left: 8px; /* espace avec le texte */
 }
+
+#diplomes ul {
+  border-left: 3px solid #e5e7eb;
+  padding-left: 1rem;
+}
+#diplomes li {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+#diplomes li::before {
+  content: "🎓";
+  position: absolute;
+  left: -1.8rem;
+}
