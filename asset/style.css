@@ -134,3 +134,11 @@ footer {
   background: #fff;
 }
 
+/* Icônes des compétences */
+#skills ul li img {
+  width: 28px;       /* taille fixe (ajuste si tu veux plus petit/grand) */
+  height: 28px;
+  object-fit: contain; /* garde les proportions */
+  vertical-align: middle; /* aligne avec le texte */
+  margin-left: 8px; /* espace avec le texte */
+}
