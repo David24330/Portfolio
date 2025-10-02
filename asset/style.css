@@ -144,15 +144,17 @@ footer {
 }
 
 .preview_compétences {
-  display: inline-block;     /* permet de les aligner sur la même ligne */
-  width: 50px;               /* taille uniforme (ajuste selon tes goûts) */
-  height: auto;              /* garde les proportions */
-  margin: 0 10px;            /* espace horizontal entre les logos */
-  vertical-align: middle;    /* bien alignés au centre verticalement */
-  transition: transform 0.3s ease; /* petit effet hover sympa */
+  display: inline-block;       /* tous sur la même ligne */
+  width: 35px;                 /* taille réduite (au lieu de 50px) */
+  height: 35px;                /* taille uniforme */
+  object-fit: contain;         /* garde les proportions */
+  margin: 0 8px;               /* petit espace entre les logos */
+  vertical-align: middle;      /* alignement vertical parfait */
+  transition: transform 0.3s ease;
 }
 
 .preview_compétences:hover {
-  transform: scale(1.1);     /* grossit légèrement au survol */
+  transform: scale(1.1);       /* effet zoom au survol */
 }
+
 
