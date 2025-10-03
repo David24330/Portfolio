@@ -147,15 +147,13 @@ footer {
 }
 
 .preview_compétences {
-  display: inline-block; /* tous sur la même ligne */
-  width: 30px; /* taille réduite (au lieu de 50px) */
-  height: 30px; /* taille uniforme */
-  -o-object-fit: contain;
-     object-fit: contain; /* garde les proportions */
-  margin: 0 8px; /* petit espace entre les logos */
-  vertical-align: middle; /* alignement vertical parfait */
-  transition: transform 0.3s ease;
+  width: 20px;   /* taille plus petite */
+  height: 20px;
+  object-fit: contain; /* garde les proportions */
+  margin: 0 5px; /* espace réduit entre les logos */
+  vertical-align: middle; /* bien aligné avec le texte */
 }
+
 
 .preview_compétences:hover {
   transform: scale(1.1); /* effet zoom au survol */
