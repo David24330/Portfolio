@@ -117,13 +117,7 @@ a.bg-blue-600:hover {
   box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
 }
 
-#presentation img {
-  width: 160px; /* Taille de l'image */
-  height: 160px; /* Taille égale pour un cercle parfait */
-  -o-object-fit: cover;
-     object-fit: cover; /* Ajuste l'image */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombre douce */
-}
+
 
 #presentation a {
   padding: 0 10px;
