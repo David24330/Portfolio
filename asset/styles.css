@@ -140,11 +140,11 @@ footer {
 }
 
 .preview_compétences {
-  width: 20px;   /* taille plus petite */
-  height: 20px;
-  background: none;
-  border: none;
-  box-shadow: none;
+    width: 120px;
+    height: 120px;
+    background: none;
+    border: none;
+    box-shadow: none;
 }
 
 
