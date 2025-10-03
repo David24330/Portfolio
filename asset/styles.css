@@ -118,7 +118,6 @@ a.bg-blue-600:hover {
 }
 
 #presentation img {
-  border-radius: 50%; /* Rond */
   width: 160px; /* Taille de l'image */
   height: 160px; /* Taille égale pour un cercle parfait */
   -o-object-fit: cover;
