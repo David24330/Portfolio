@@ -142,9 +142,6 @@ footer {
 .preview_compétences {
   width: 20px;   /* taille plus petite */
   height: 20px;
-  object-fit: contain; /* garde les proportions */
-  margin: 0 5px; /* espace réduit entre les logos */
-  vertical-align: middle; /* bien aligné avec le texte */
 }
 
 
