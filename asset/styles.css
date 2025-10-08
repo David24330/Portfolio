@@ -151,3 +151,74 @@ footer {
 .preview_compétences:hover {
   transform: scale(1.1); /* effet zoom au survol */
 }
+
+/* 📱 Version responsive pour téléphone */
+@media (max-width: 768px) {
+  
+  /* Navigation : menu vertical */
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  nav ul li {
+    text-align: center;
+  }
+
+  /* Sections : hauteur automatique */
+  .section {
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  /* Portrait */
+  #presentation img.rounded-full {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Titres */
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+  h4 {
+    font-size: 1.4rem;
+  }
+  h5 {
+    font-size: 1.2rem;
+  }
+
+  /* Compétences : icônes plus petites */
+  .preview_compétences {
+    width: 80px;
+    height: 80px;
+  }
+
+  #skills .grid {
+    grid-template-columns: 1fr; /* passer à 1 colonne */
+    gap: 20px;
+  }
+
+  /* Boutons flèches */
+  .scroll-down, .scroll-up {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  /* Boutons contact / CV */
+  a.button, a.bg-blue-600, a.bg-green-800 {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 12px;
+    padding: 12px;
+  }
+}
