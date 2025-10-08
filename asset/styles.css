@@ -154,19 +154,13 @@ footer {
 
 /* 📱 Version responsive pour téléphone */
 @media (max-width: 768px) {
-  
-  /* Navigation : menu vertical */
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
+
+  /* 🚫 Cacher la navbar */
+  header {
+    display: none;
   }
 
-  nav ul li {
-    text-align: center;
-  }
-
-  /* Sections : hauteur automatique */
+  /* Sections : hauteur automatique et padding réduit */
   .section {
     height: auto;
     padding: 1.5rem;
@@ -178,29 +172,57 @@ footer {
     height: 120px;
   }
 
-  /* Titres */
+  /* Titres réduits */
   h2 {
     font-size: 1.8rem;
+    text-align: center;
   }
   h3 {
     font-size: 1.6rem;
+    text-align: center;
   }
   h4 {
     font-size: 1.4rem;
+    text-align: center;
   }
   h5 {
     font-size: 1.2rem;
   }
 
-  /* Compétences : icônes plus petites */
+  /* Compétences : harmonisation */
+  #skills .grid {
+    grid-template-columns: 1fr; /* 1 colonne */
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  #skills .bg-white {
+    padding: 20px;
+    text-align: center;
+  }
+
+  #skills ul {
+    padding-left: 0;
+    list-style-position: inside;
+    text-align: left;
+  }
+
+  #skills ul li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  /* Icônes plus petites */
   .preview_compétences {
     width: 80px;
     height: 80px;
   }
-
-  #skills .grid {
-    grid-template-columns: 1fr; /* passer à 1 colonne */
-    gap: 20px;
+  #skills ul li img {
+    width: 24px;
+    height: 24px;
   }
 
   /* Boutons flèches */
