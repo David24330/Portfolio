@@ -152,49 +152,50 @@ footer {
   transform: scale(1.1); /* effet zoom au survol */
 }
 
-/* Boutons contact */
-  .contact-buttons a {
-    display: inline-block;
-    font-weight: 600;
-    font-size: 16px;
-    padding: 14px 28px;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+/* Boutons contact améliorés */
+.contact-buttons a {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-  /* Bouton Envoyer un mail */
-  .contact-buttons a.mail-button {
-    background: linear-gradient(135deg, #3b82f6, #2563eb);
-    color: white;
-    border: none;
-  }
-  .contact-buttons a.mail-button:hover {
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
-  }
+/* Bouton Envoyer un mail */
+.mail-button {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+}
+.mail-button:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
 
-  /* Bouton Voir mon CV */
-  .contact-buttons a.cv-button {
-    background: linear-gradient(135deg, #16a34a, #15803d);
-    color: white;
-    border: none;
-  }
-  .contact-buttons a.cv-button:hover {
-    background: linear-gradient(135deg, #15803d, #166534);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(22, 163, 74, 0.4);
-  }
+/* Bouton Voir mon CV */
+.cv-button {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  color: white;
+  border: none;
+}
+.cv-button:hover {
+  background: linear-gradient(135deg, #15803d, #166534);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(22, 163, 74, 0.4);
+}
 
-  /* Alignement boutons */
-  .contact-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
-  }
+/* Alignement boutons */
+.contact-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 
 /* 📱 Version responsive pour téléphone */
 @media (max-width: 768px) {
