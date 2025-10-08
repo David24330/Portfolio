@@ -152,7 +152,6 @@ footer {
   transform: scale(1.1); /* effet zoom au survol */
 }
 
-/* 📱 Version responsive pour téléphone */
 @media (max-width: 768px) {
 
   /* 🚫 Cacher la navbar */
@@ -163,84 +162,82 @@ footer {
   /* Sections : hauteur automatique et padding réduit */
   .section {
     height: auto;
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   /* Portrait */
   #presentation img.rounded-full {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
   }
 
   /* Titres réduits */
   h2 {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-  h3 {
     font-size: 1.6rem;
     text-align: center;
   }
-  h4 {
+  h3 {
     font-size: 1.4rem;
     text-align: center;
   }
-  h5 {
+  h4 {
     font-size: 1.2rem;
+    text-align: center;
+  }
+  h5 {
+    font-size: 1rem;
   }
 
-  /* Compétences : harmonisation */
+  /* 📌 Section compétences : scroll horizontal */
   #skills .grid {
-    grid-template-columns: 1fr; /* 1 colonne */
-    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 15px;
     padding: 0 10px;
+    scroll-snap-type: x mandatory;
   }
 
   #skills .bg-white {
-    padding: 20px;
+    flex: 0 0 80%;
+    padding: 15px;
     text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    scroll-snap-align: start;
   }
 
-  #skills ul {
-    padding-left: 0;
-    list-style-position: inside;
-    text-align: left;
+  /* Réduire icônes et textes */
+  .preview_compétences {
+    width: 60px;
+    height: 60px;
+  }
+
+  #skills ul li img {
+    width: 20px;
+    height: 20px;
   }
 
   #skills ul li {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 8px;
-    font-size: 14px;
-  }
-
-  /* Icônes plus petites */
-  .preview_compétences {
-    width: 80px;
-    height: 80px;
-  }
-  #skills ul li img {
-    width: 24px;
-    height: 24px;
+    font-size: 13px;
   }
 
   /* Boutons flèches */
   .scroll-down, .scroll-up {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
   }
 
   /* Boutons contact / CV */
   a.button, a.bg-blue-600, a.bg-green-800 {
-    font-size: 14px;
-    padding: 12px 20px;
+    font-size: 13px;
+    padding: 10px 16px;
   }
 
   /* Footer */
   footer {
     font-size: 12px;
-    padding: 12px;
+    padding: 10px;
   }
 }
